@@ -8,12 +8,10 @@
 
 | Capability               | Details                                                                                                                  |                                                 |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
-|                          |                                                                                                                          |                                                 |
 | **Flexible scope**       | Pick a single context / namespace, fan out to *all* contexts, or use interactive prompts.                                |                                                 |
 | **Digest vs. tag**       | `--mode id` (default) prints the resolved image **digest**; `--mode image` prints the image reference from the Pod spec. |                                                 |
 | **Table or JSON output** | Human‑friendly colourised table **or** machine‑readable JSON file.                                                       |                                                 |
 | **Two JSON hierarchies** | `flat` = `context → namespace → [images]`                                                                                | `pod` = `context → namespace → pod → [images]`. |
-|                          |                                                                                                                          |                                                 |
 | **Minimal deps**         | Just `bash`, `kubectl`, and `jq`.                                                                                        |                                                 |
 
 ---

@@ -50,6 +50,7 @@ esac; done
 case "$OUTPUT_MODE"   in image|id)   ;; *) echo "❌  --mode image|id"; exit 1;; esac
 case "$OUTPUT_FORMAT" in table|json) ;; *) echo "❌  --format table|json"; exit 1;; esac
 case "$JSON_STYLE"    in flat|pod)   ;; *) echo "❌  --json-style flat|pod"; exit 1;; esac
+command -v kubectl >/dev/null || { echo "❌  kubectl required but not installed"; exit 1; }
 command -v jq >/dev/null || { echo "❌  jq required but not installed"; exit 1; }
 
 ###############################################################################
@@ -212,3 +213,4 @@ for t in "${TRIPLES[@]}"; do
          "$MAGENTA" "$max_ns" "$ns" "$RESET" \
          "$YELLOW" "$max_ctx" "$ctx" "$RESET"
 done
+

@@ -214,8 +214,3 @@ You can keep both in your toolbox—same goal, different ergonomics.
 * The Python tool suppresses `urllib3` insecure warnings (for self‑signed clusters you don’t control). Use proper CA trust in production.
 * The Bash script strips `docker-pullable://` prefixes and can read digests from `status.containerStatuses[].imageID` when present.
 
----
-
-## 📝 License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
